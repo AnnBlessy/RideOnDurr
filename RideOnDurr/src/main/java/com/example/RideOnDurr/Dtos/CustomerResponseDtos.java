@@ -1,23 +1,21 @@
 package com.example.RideOnDurr.Dtos;
 
-public class CustomerDtos {
+public class CustomerResponseDtos {
     private String userName;
-    private String name;
-    private String password;
+    private String Name;
     private String emailId;
     private String contact;
     private String address;
 
     // No-args constructor
-    public CustomerDtos(){
+    public CustomerResponseDtos(){
     }
 
-    //Custom constructor
-    public CustomerDtos(String userName,String Name,
-    String password,String emailId,String contact,String address){
+    // custom constructor
+    public CustomerResponseDtos(String userName,String Name,
+    String emailId,String contact,String address){
         this.userName = userName;
-        this.name = name;
-        this.password = password;
+        this.Name = Name;
         this.emailId = emailId;
         this.contact = contact;
         this.address = address;
@@ -32,19 +30,11 @@ public class CustomerDtos {
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        Name = name;
     }
 
     public String getEmailId() {
