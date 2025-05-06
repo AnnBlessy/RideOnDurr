@@ -17,4 +17,13 @@ public class DriverService {
     public void addDriverDetails(DriverEntity driver){
         driverRepo.save(driver);
     }
+
+    public Optional<DriverEntity> getDriverById(Long driverId){
+        return driverRepo.findById(driverId);
+    }
+
+    public void updateDriverDetails(DriverEntity driver){
+        String name = driver.getDriverName();
+        String
+    }
 }
