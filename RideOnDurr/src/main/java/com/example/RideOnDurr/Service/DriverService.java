@@ -1,13 +1,12 @@
 package com.example.RideOnDurr.Service;
 
-import com.example.RideOnDurr.Entity.DriverEntity;
-import com.example.RideOnDurr.Repo.DriverRepo;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Driver;
-import java.util.List;
-import java.util.Optional;
+import com.example.RideOnDurr.Entity.DriverEntity;
+import com.example.RideOnDurr.Repo.DriverRepo;
 
 @Service
 public class DriverService {
@@ -20,10 +19,5 @@ public class DriverService {
 
     public Optional<DriverEntity> getDriverById(Long driverId){
         return driverRepo.findById(driverId);
-    }
-
-    public void updateDriverDetails(DriverEntity driver){
-        String name = driver.getDriverName();
-        String
     }
 }
