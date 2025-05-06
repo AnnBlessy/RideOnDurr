@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class CarType {
+public class CarTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer CarTypeId;
@@ -16,14 +16,14 @@ public class CarType {
     private Double farePerKM;
     private Integer maxCapacity;
 
-    public CarType(Integer carTypeId, String carType, Double farePerKM, Integer maxCapacity) {
+    public CarTypeEntity(Integer carTypeId, String carType, Double farePerKM, Integer maxCapacity) {
         CarTypeId = carTypeId;
         CarType = carType;
         this.farePerKM = farePerKM;
         this.maxCapacity = maxCapacity;
     }
 
-    public CarType() {
+    public CarTypeEntity() {
     }
 
 }

@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class RideRatings {
+public class RideRatingsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ratingId;
