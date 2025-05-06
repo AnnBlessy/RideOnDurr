@@ -8,13 +8,13 @@ import lombok.Data;
 public class LiveBookingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int LiveId;
-    private int OTP;
+    private Integer LiveId;
+    private Integer OTP;
     @OneToOne
-    @JoinColumn(name="pendingId",referencedColumnName = "pendingId")
+    @JoinColumn(name="pendingBookingId",referencedColumnName = "pendingBookingId")
     private PendingBookingEntity PendingBooking;
 
-    public LiveBookingEntity(int liveId, int OTP, PendingBookingEntity pendingBooking) {
+    public LiveBookingEntity(Integer liveId, Integer OTP, PendingBookingEntity pendingBooking) {
         LiveId = liveId;
         this.OTP = OTP;
         PendingBooking = pendingBooking;
