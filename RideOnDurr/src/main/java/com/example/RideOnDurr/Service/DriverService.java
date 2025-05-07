@@ -24,6 +24,10 @@ public class DriverService {
 
     public void updateDriverDetails(DriverEntity driver){
         String name = driver.getDriverName();
-        String
+        String user = driver.getUserName();
+        Long phone = driver.getPhoneNo();
+        String email = driver.getEmail();
+        String pass = driver.getPassword();
+        
     }
 }
