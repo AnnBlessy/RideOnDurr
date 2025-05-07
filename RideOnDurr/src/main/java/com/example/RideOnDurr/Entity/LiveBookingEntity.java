@@ -7,7 +7,7 @@ import lombok.Data;
 @Entity
 public class LiveBookingEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer LiveId;
     private Integer OTP;
     @OneToOne

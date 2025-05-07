@@ -7,7 +7,7 @@ import lombok.Data;
 @Entity
 public class AllBookingEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer BookingId;
 
     @OneToOne

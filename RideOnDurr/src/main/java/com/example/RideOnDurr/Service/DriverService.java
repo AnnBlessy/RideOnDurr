@@ -28,6 +28,11 @@ public class DriverService {
         Long phone = driver.getPhoneNo();
         String email = driver.getEmail();
         String pass = driver.getPassword();
-        
+
+        driverRepo.updateDriverDetails(name, user, phone, email, pass);
+    }
+
+    public void deleteDriver(Long driverId){
+        driverRepo.deleteById(driverId);
     }
 }
