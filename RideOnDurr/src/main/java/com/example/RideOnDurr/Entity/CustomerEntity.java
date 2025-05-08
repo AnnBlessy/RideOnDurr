@@ -30,7 +30,7 @@ public class CustomerEntity {
     public CustomerEntity() {
     }
     
-    //custom-constructor
+    //parameterized-constructor
     public CustomerEntity(String userName,String Name,String password,
     String emailId,String contact,String address){
         this.userName = userName;

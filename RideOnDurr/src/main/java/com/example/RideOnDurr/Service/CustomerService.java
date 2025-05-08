@@ -21,9 +21,22 @@ public class CustomerService {
     } 
 
     // For Login Authentication
-    // public CustomerResponseDtos loginCustomer(CustomerLoginDtos){
-
-    // }
+    public CustomerResponseDtos loginCustomer(String username,String password){
+        Optional<CustomerEntity> optionalCustomer = custRepo.findByUserNameAndPassword(username, password);
+        if(optionalCustomer.isPresent()){
+            CustomerEntity customer = optionalCustomer.get();
+            return new CustomerResponseDtos(
+                customer.getName(),
+                customer.getUserName(),
+                customer.getName(),
+                customer.getContact(),
+                customer.getAddress()
+            );
+        }
+        else{
+            throw new RuntimeException("userName/mailId is not valid");
+        }
+    }
 
     public CustomerResponseDtos getCustomerById(Integer id){
         Optional<CustomerEntity> optionalCustomer = custRepo.findById(id);
